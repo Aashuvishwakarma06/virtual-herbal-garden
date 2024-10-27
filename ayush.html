@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Oasis - Herbal Garden</title>
+    <style>
+        /* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li:hover a,
+.dropdown:hover .dropdown-content {
+    background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4CAF50;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    color: white;
+}
+
+/* Main Section */
+#main {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#main h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.logo1{
+    height: 100px;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-about, .footer-follow {
+    width: 45%;
+}
+
+footer h3 {
+    font-size: 18px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .footer-about, .footer-follow {
+        width: 100%;
+    }
+}
+.neeche{
+    margin-top: 50px;
+}
+.btn{
+    background-color: #4CAF50;
+    color: black;
+    text-transform: capitalize;
+    margin: 2px;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 15px;
+}
+.buttn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navbar -->
+    <header>
+        <div class="logo">Ayush Oasis</div>
+        <div class="logo"><img src="logo2.jpeg" alt="" class="logo1"></div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/ai.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#about">plants</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#herbal plants">Herbal Plants</a></li>
+                        <li><a href="#team">ayush plants</a></li>
+                    </ul>
+                </li>
+                <li><a href="#plants">Plants</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section id="main">
+        <h1>Welcome to Ayush Oasis</h1>
+        <p>Your one-stop destination for natural herbal plants and Ayurvedic wisdom.</p>
+    </section>
+<section>
+    <div class="buttn">
+        <button class="btn"><a href=""> Continue...</a> </button>
+    </div>
+</section>
+    
+    <!-- Footer -->
+    <footer class="neeche">
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Ayush Oasis is dedicated to bringing natural healing and wellness through a variety of herbal plants.</p>
+        </div>
+        <div class="footer-follow">
+            <h3>Follow Us</h3>
+            <p>Stay connected for the latest updates.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        alert("hello")
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-item");
+
+function changeSlide(direction) {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slides[currentSlide].classList.add("active");
+}
+
+// Initialize the first slide as active
+slides[0].classList.add("active");
+
+    </script>
+</body>
+</html>
